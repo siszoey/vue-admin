@@ -1,0 +1,40 @@
+@import './color';  
+
+@for $i from 1 through length($headerBg) {
+	#systemInstall{
+		.btn-#{nth($colorsValue,$i)}{
+			background-color: nth($navActive,$i);
+		}
+	}
+	.theme-#{nth($colorsValue,$i)} {
+		.header-bg {
+			background-color: nth($headerBg,$i)
+		}
+		.el-menu-item.is-active {
+			color: nth($navActive,$i);
+			background-color: nth($navFocus,$i)
+		}
+ 		.el-menu-item:focus, .el-menu-item:hover{
+ 			background-color: nth($navFocus,$i)
+ 		}
+ 		.el-tabs__item.is-active,.el-tabs__item:hover{
+ 			color: nth($navActive,$i);
+ 		}
+		.el-button--primary{
+			background-color: nth($btnPrimary,$i);
+			border-color: nth($btnPrimary,$i);
+		}
+
+	}
+} 
+
+// @for $i from 1 through length($theme) {
+
+ 
+// 		.theme-#{nth($colorsValue,1)}{
+// 		 background: red; 
+// 	 }
+ 
+	  
+   
+// }
