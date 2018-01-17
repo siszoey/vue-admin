@@ -1,0 +1,26 @@
+
+//         主题一 主题二  主题三  主题四
+$headerBg:#2983d8,#73d13d,#36cfc9,#597ef7;  //5   头部 
+$navActive:#409EFF,#52c41a,#13c2c2,#2f54eb;//6    左侧菜单选中
+$navFocus:#ecf5ff,#f6ffed,#e6fffb,#f0f5ff; //1    左侧菜单hover
+$btnPrimary:#409EFF,#73d13d,#36cfc9,#597ef7;  //5  主要按钮
+$colorsValue:'2983d8','73d13d','36cfc9','597ef7';  
+
+
+
+// $theme:[($hederColors: #2983d8,$navActiveColors:#409EFF,$navFocusColors:#ecf5ff,$colorsValue: '2983d8'),  
+// 		($hederColors: #95de64,$navActiveColors:#a0d911,$navFocusColors:#fcffe6,$colorsValue: '95de64')];
+ 
+ // $theme:[(#2983d8,#409EFF,#ecf5ff,$colorsValue: '0000ff'),
+ // 		 (#95de64,#a0d911,#fcffe6,$colorsValue: '95de64')] 
+
+ // $theme:(
+ // 			(
+ // 				$colors:(#2983d8,#409EFF,#ecf5ff),$colorsValue: '2983d8'
+ // 			),
+ // 		 	(
+ // 		 		$colors:(#95de64,#a0d911,#fcffe6),$colorsValue: '95de64'
+ // 		 	)
+ // 		)
+
+
