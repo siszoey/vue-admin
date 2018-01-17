@@ -6,7 +6,7 @@
  . 国际化
  . 自定义风格
 
- ![image](https://github.com/guozhikun/vue-admin/src/assets/image/01.png)
+ ![image](https://github.com/guozhikun/vue-admin/01.png)
 
 ## Build Setup
 
