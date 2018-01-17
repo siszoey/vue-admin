@@ -1,6 +1,10 @@
-# webgismanager
+# vue+vuex+axios+elementUI 后台管理系统模板
 
-> webgismanager
+> 技术：vue+vuex+vue-router+axios+sass+elementui+es6
+
+# 现有功能
+ . 国际化
+ . 自定义风格
 
 ## Build Setup
 
