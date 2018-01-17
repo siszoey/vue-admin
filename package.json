@@ -54,10 +54,17 @@
     "less": "^2.7.2",
     "axios": "^0.17.1",
     "jquery": "^3.2.1",
+<<<<<<< HEAD
     "vue-i18n": "^7.3.3",
     "node-sass": "4.7.2",
     "sass-loader": "6.0.6",
     "babel-polyfill": "^6.26.0"
+=======
+    "vue-i18n":"^7.3.3",
+    "node-sass":"4.7.2",
+    "sass-loader":"6.0.6",
+    "babel-polyfill": "^6.26.0" 
+>>>>>>> d1fafc4fc7b4b59d86cc4571da8d546cece592a7
   },
   "engines": {
     "node": ">= 4.0.0",
@@ -66,6 +73,10 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
+<<<<<<< HEAD
+=======
+    
+>>>>>>> d1fafc4fc7b4b59d86cc4571da8d546cece592a7
     "not ie <= 8"
   ]
 }
