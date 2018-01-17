@@ -6,6 +6,8 @@
  . 国际化
  . 自定义风格
 
+ ![image](https://github.com/guozhikun/vue-admin/src/assets/image/0..png)
+
 ## Build Setup
 
 ``` bash
