@@ -12,7 +12,7 @@
             <p class="nav-active-colors">{{ $t("message.title") }}</p>
         </el-col>
         <el-col :span="6">
-          <el-select v-model="locale" placeholder="请选择" @change="langeChange" size="small" style="float:right" class="language-select">
+          <el-select v-model="locale" placeholder="请选择" size="small" style="float:right" class="language-select">
             <el-option
              v-for="item in options"
               :key="item.value"
@@ -20,6 +20,9 @@
               :value="item.value">
             </el-option>
         </el-select>
+        <div style="float:right">
+          <screen-full></screen-full>
+          </div>
             <div class="login">
             <img class="userimg" src="./assets/image/userlogo.png"> 
             <el-dropdown class="username" @command="handleCommand">
@@ -62,9 +65,10 @@
 <script>
 import {mapMutations, mapGetters} from 'vuex'
 import api from './fetch/index'
+import screenFull from './components/screenfull'
 	export default {
 		components:{
-			 
+			 screenFull
 		},
 	data() {
           return {
@@ -118,11 +122,33 @@ import api from './fetch/index'
             analysisTabList: 'DONE_NAV_ANALYSIS_TABLIST'
         })
     },
-    methods: {
-      langeChange(){
+    watch:{
+      locale(newVal,oldVal){
         this.$i18n.locale = this.locale
         localStorage.setItem('localeSystemLang',this.locale);
-      },
+         var namesMap;
+         var newList=[];
+         for(var index in this.$i18n.messages){
+            if(this.$i18n.messages[index].message.lang == newVal){
+              namesMap = this.$i18n.messages[index].message.nav
+            }
+         }
+         for(var i=0;i<this.$store.state.tab.analysisTabList.length;i++){
+           for(var j=0;j< namesMap.length;j++){
+              if(this.$store.state.tab.analysisTabList[i].name == namesMap[j].id){
+                 newList.push({closable:this.$store.state.tab.analysisTabList[i].closable,
+                  component:this.$store.state.tab.analysisTabList[i].component,
+                  disabled:this.$store.state.tab.analysisTabList[i].disabled,
+                  label:namesMap[j].name,
+                  name:this.$store.state.tab.analysisTabList[i].name
+                 })
+              }
+           }
+         }
+         this.$store.state.tab.analysisTabList = newList
+      }
+    },
+    methods: {
       collapseChange(){
          if ( $(".menu-trigger").hasClass('close')) {
           $(".menu-trigger").removeClass('close');
